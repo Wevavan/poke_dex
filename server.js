@@ -3,11 +3,13 @@ const dotenv = require('dotenv');
 const connectDataBase = require('./config/MongoDb');
 const Importdata = require('./Dataimport');
 const PokemonsRoutes = require('./Routes/PokemonsRoutes');
+const bodyParser = require('body-parser')
 
 
 const app = express();
 dotenv.config();
 connectDataBase();
+app.use(bodyParser.json())
 
 // API
 app.use("/api/pokemons", PokemonsRoutes);

@@ -5,6 +5,7 @@ const pokemonSchema = mongoose.Schema(
       nom: {
         type: String,
         required: true,
+        unique: true,
       },
       numero: {
         type: String,
@@ -18,6 +19,7 @@ const pokemonSchema = mongoose.Schema(
       image: {
         type: String,
         required: true,
+        unique: true,
       },
       couleur: {
         type: String,
